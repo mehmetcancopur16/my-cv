@@ -34,3 +34,123 @@ body {
     justify-content: center;
     padding: 40px; /* Space around the CV paper */
 }
+
+/* 4. LAYOUT STRUCTURE */
+
+/* The Main Wrapper - Looking like an A4 Paper */
+.container {
+    display: flex; /* This turns the row on! Side-by-side mode. */
+    width: 100%;
+    max-width: 1000px; /* Don't let it get too wide on huge screens */
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow); /* Gives it that "floating paper" look */
+    border-radius: var(--border-radius); /* Rounded corners */
+    overflow: hidden; /* Ensures child elements don't spill out */
+}
+
+/* Left Column (Sidebar) - Takes up 1 part of space */
+.sidebar {
+    flex: 1; /* 25-30% width roughly */
+    background-color: var(--bg-light); /* Light grey background */
+    padding: var(--spacing-md);
+    border-right: 1px solid #ddd; /* Tiny line separating columns */
+    text-align: center; /* Centers the text and image inside */
+}
+
+/* Right Column (Main Content) - Takes up 3 parts of space */
+.main-content {
+    flex: 3; /* 70-75% width roughly */
+    padding: 40px; /* More breathing room for the text */
+}
+
+/* 5. RESPONSIVE (Mobile View) */
+/* When screen is smaller than 768px (Tablets/Phones) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack them top-to-bottom again */
+    }
+    
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* 6. TYPOGRAPHY & ELEMENTS */
+
+/* Headers */
+h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    text-transform: uppercase; /* PROFESSIONAL LOOK */
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee; /* Underline effect */
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes it a circle */
+    object-fit: cover; /* Ensures photo doesn't stretch */
+    border: 4px solid white;
+    box-shadow: var(--shadow);
+    margin-bottom: 15px;
+}
+
+/* Clean Lists (No ugly bullet points) */
+ul {
+    list-style: none; /* Removes default bullets */
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.skills-list li {
+    background: white;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.05); /* Tiny shadow for depth */
+}
+
+/* Job & Education Cards */
+.job, .edu-item {
+    margin-bottom: 25px;
+}
+
+.job h4, .edu-item h4 {
+    margin-bottom: 2px;
+    font-size: 1.1rem;
+}
+
+.role {
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    font-style: italic;
+}
