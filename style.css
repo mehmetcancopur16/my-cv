@@ -1,0 +1,36 @@
+/* 1. GLOBAL VARIABLES (Design System) */
+:root {
+    /* Color Palette - Dark Slate & Professional Blue */
+    --primary-color: #2c3e50;    /* Dark Blue-Grey (Headers) */
+    --secondary-color: #3498db;  /* Bright Blue (Links/Accents) */
+    --text-dark: #333333;        /* Main Text */
+    --text-light: #7f8c8d;       /* Muted Text (Dates) */
+    --bg-light: #f4f7f6;         /* Sidebar Background */
+    --bg-white: #ffffff;         /* Main Content Background */
+    
+    /* Spacing & Borders */
+    --spacing-md: 20px;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Typography */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. RESET (Clean Slate) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Crucial: Includes padding in width calculations */
+}
+
+/* 3. BASE STYLES */
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #eef2f3; /* Slight grey for the whole page */
+    display: flex;
+    justify-content: center;
+    padding: 40px; /* Space around the CV paper */
+}
