@@ -154,3 +154,11 @@ ul {
     margin-bottom: 8px;
     font-style: italic;
 }
+
+/* Icons */
+.icon {
+    color: var(--secondary-color); /* Matches your blue headers */
+    width: 25px; /* Fixed width ensures text aligns perfectly */
+    text-align: center;
+    margin-right: 10px;
+}
